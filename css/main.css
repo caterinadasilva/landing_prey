@@ -70,7 +70,7 @@ body {
   font-family: 'Titillium Web', sans-serif;
   font-size: 1.6rem;
   line-height: 1.875;
-  color: #767676;
+  color: #14222C;
   margin: 0;
   padding: 0;
 }
@@ -1574,7 +1574,7 @@ h1.intro-header::before {
 .home-social-list li a:hover,
 .home-social-list li a:focus,
 .home-social-list li a:active {
-  color: #F79647;
+  color: #2980b9;
 }
 
 
@@ -1599,7 +1599,7 @@ h1.intro-header::before {
 
 .home-scrolldown a:hover,
 .home-scrolldown a:focus {
-  color: #F79647 !important;
+  color: #2980b9 !important;
 }
 
 html[data-useragent*='MSIE 10.0'] .home-scrolldown,
@@ -1937,7 +1937,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 .about-how-content .step {
   padding: 0 40px 1.5rem 60px;
   position: relative;
-  min-height: 240px;
+  min-height: 200px;
 }
 
 .about-how-content .step h3 {
@@ -2700,3 +2700,12 @@ footer ul a:visited {
 
 
 /*# sourceMappingURL=main.css.map */
+
+.protected {
+  position: absolute;
+  display: block;
+  z-index: -1;
+  top: 0;
+  right: 10rem;
+  width: 150px;
+}
