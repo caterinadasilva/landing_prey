@@ -2106,7 +2106,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 
 #testimonials {
   background: #FFFFFF;
-  padding: 15rem 0 9rem;
+  padding: 15rem 0 0;
   text-align: center;
   min-height: 600px;
 }
@@ -2456,10 +2456,10 @@ footer ul a:visited {
   padding: 0;
   outline: 0;
   border: none;
-  width: 93px;
-  height: 21px;
+  width: 100px;
+  height: 35px;
   background: url("../images/logo.png") no-repeat center;
-  background-size: 93px 21px;
+  background-size: cover;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
@@ -2709,3 +2709,115 @@ footer ul a:visited {
   right: 10rem;
   width: 150px;
 }
+
+/* ===================================================================
+ * # stats - (_site-layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+.block-1-3 .col-block {
+    width: 33.3%;
+}
+
+.s-stats {
+    background-image: url('../images/bg-cover.jpg');
+    background-size: cover;
+    text-align: center;
+    overflow: hidden;
+}
+
+.stats__col {
+    padding: 7.8rem 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.stats__upsign {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    text-align: left;
+}
+
+.stats__upsign i {
+    font-size: 2.1rem;
+    line-height: 1;
+    color: #cf3e3e;
+    color: #008C2C;
+}
+
+.stats__count {
+    font-family: "Titillium Web", san-serif;
+    font-size: 6rem;
+    line-height: 1;
+    color: #f4f5f9;
+    padding-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.stats__count::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 70px;
+    background-color: #2980b9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.stats h4 {
+    font-family: "Open Sans", sans-serif;
+    margin-top: 1.8rem;
+    color: #f4f5f9;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * stats
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+    .stats__count {
+        font-size: 5.8rem;
+    }
+    .stats h4 {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .stats__count {
+        font-size: 5rem;
+    }
+    .stats h4 {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .stats__count {
+        font-size: 7.2rem;
+    }
+    .stats h4 {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .s-stats {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    .stats__col {
+        padding: 4.8rem 2rem 4.2rem;
+    }
+}
+

@@ -233,6 +233,43 @@
 		});
 	};	
 
+	/* Stat Counter
+    * ------------------------------------------------------ */
+    var ssStatCount = function() {
+
+        var statSection = $(".s-stats"),
+        stats = $(".stats__count");
+
+        statSection.waypoint({
+
+            handler: function(direction) {
+
+                if (direction === "down") {
+
+                    stats.each(function () {
+                        var $this = $(this);
+
+                        $({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                            duration: 4000,
+                            easing: 'swing',
+                            step: function (curValue) {
+                                $this.text(Math.ceil(curValue).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+                            }
+                        });
+                    });
+
+                } 
+
+                // trigger once only
+                this.destroy();
+
+            },
+
+            offset: "90%"
+
+        });
+    };
+
   
   /* Initialize
 	* ------------------------------------------------------ */
@@ -249,6 +286,7 @@
 		ssAOS();		
 		ssAjaxChimp();
 		ssBackToTop();
+		ssStatCount();
 
 	})();
  
